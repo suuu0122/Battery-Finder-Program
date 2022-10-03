@@ -291,20 +291,23 @@ document.getElementById("batterySection").innerHTML = getHtmlCanUseBattery(brand
 // Step1,2,3の変更時にHTML更新
 document.addEventListener("DOMContentLoaded", function(){
 	let brandSelect = document.getElementById("brandSelect");
+	let modelSelect = document.getElementById("modelSelect");
 	let powerConsumptionInput = document.getElementById("powerConsumption");
 
 	// Step1変更時にStep2,4のHTML更新
 	brandSelect.addEventListener("change", function(){
 		document.getElementById("modelSelect").innerHTML = getHtmlModelSelect(brandSelect.value);
 		let modelSelect = document.getElementById("modelSelect");
-		let powerConsumptionInput = document.getElementById("powerConsumption");
+		document.getElementById("batterySection").innerHTML = getHtmlCanUseBattery(brandSelect.value, modelSelect.value, parseInt(powerConsumptionInput.value));
+	}, false);
+
+	// Step2変更時にStep4のHTML更新
+	modelSelect.addEventListener("change", function(){
 		document.getElementById("batterySection").innerHTML = getHtmlCanUseBattery(brandSelect.value, modelSelect.value, parseInt(powerConsumptionInput.value));
 	}, false);
 
 	// Step3変更時にStep4のHTML更新
 	powerConsumptionInput.addEventListener("change", function(){
-		let brandSelect = document.getElementById("brandSelect")
-		let modelSelect = document.getElementById("modelSelect");
 		document.getElementById("batterySection").innerHTML = getHtmlCanUseBattery(brandSelect.value, modelSelect.value, parseInt(powerConsumptionInput.value));
-	})
+	}, false);
 }, false);
