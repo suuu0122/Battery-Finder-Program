@@ -1,0 +1,23 @@
+select {
+	width: 150px;
+}
+
+input {
+	width: 60px;
+}
+
+.rem1p5 {
+	font-size: 1.5rem;
+}
+
+.rem1p2 {
+	font-size: 1.2rem;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.bg-gray {
+	background-color: rgb(181, 179, 179);
+}
