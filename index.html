@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/styles.css">
+	<title>Battery-Finder-Program</title>
+</head>
+<body>
+	<h1 class="bg-primary text-white text-center p-2">Battery Finder Program</h1>
+	<div class='vh-100 d-flex flex-column px-5'>
+		<p>Step1: Select your brand</p>
+		<select class="mb-4" id="brandSelect"></select>
+		<p>Step2: Select your model</p>
+		<select class="mb-4" id="modelSelect"></select>
+		<p>Step3: Input accessory power consumption</p>
+		<input class="mb-4" type="number" value="55" min="0" max="100" id="powerConsumption" ></input>
+		<p>Step4: Choose your battery</p>
+		<table id="batterySection" border="1" style="border: 1px solid rgb(243, 240, 240); border-collapse: collapse;">
+		</table>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
